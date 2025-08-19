@@ -28,10 +28,10 @@ CafeConnect is a professional, web-based café management system. It allows user
 ![Dashboard](screenshots/dashboard.png)
 
 ### Order Here
-![Order Here](screenshots/order%20here%20screenshot.png)
+![Order Here](screenshots/order.png)
 
 ### Contact Us
-![Contact Us](screenshots/contact%20us%20screenshot.png)
+![Contact Us](screenshots/contact.png)
 
 
 
