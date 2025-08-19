@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caffe Management System</title>
+    <link rel="stylesheet" href="caffe.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="coffee-icon">☕</span> CaffePro
+        </div>
+        <ul class="nav-links">
+            <li><a href="#menu-section">Menu</a></li>
+            <li><a href="#order-section">Order</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to CaffePro</h1>
+            <p class="subtitle">Experience the best café management system for your business or personal project.</p>
+            <a href="#order-section" class="cta-btn">Order Now</a>
+        </div>
+    </section>
+    <div class="container">
+        <main>
+                        <section id="menu-section" class="card">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <h2>Menu</h2>
+                                    <button id="toggle-admin" type="button" title="Admin Menu Edit" style="font-size:1.1em;">✏️ Edit</button>
+                                </div>
+                                <input type="text" id="menu-search" placeholder="Search menu..." style="width:100%;margin-bottom:10px;">
+                                <ul id="menu-list"></ul>
+                                <form id="admin-menu-form" style="display:none; margin-top:18px;">
+                                    <h3>Edit Menu</h3>
+                                    <div style="display:flex;gap:8px;align-items:center;">
+                                        <input type="text" id="new-item-name" placeholder="Item name" required style="flex:2;">
+                                        <input type="number" id="new-item-price" placeholder="Price" min="0.1" step="0.01" required style="flex:1;">
+                                        <button type="submit">Add</button>
+                                    </div>
+                                    <ul id="admin-menu-items" style="margin-top:10px;"></ul>
+                                </form>
+                        </section>
+                        <section id="order-section" class="card">
+                                <h2>Place Order</h2>
+                                <form id="order-form">
+                                        <label for="item">Item:</label>
+                                        <select id="item" name="item"></select>
+                                        <label for="quantity">Quantity:</label>
+                                        <input type="number" id="quantity" name="quantity" min="1" value="1">
+                                        <label for="discount">Discount Code:</label>
+                                        <input type="text" id="discount" name="discount" placeholder="Enter code (optional)">
+                                        <button type="submit">Add to Order</button>
+                                </form>
+                                <div id="order-summary">
+                                        <h3>Order Summary</h3>
+                                        <ul id="order-list"></ul>
+                                        <p id="total"></p>
+                                        <div style="display:flex;gap:8px;flex-wrap:wrap;">
+                                            <button id="clear-order" type="button">Clear Order</button>
+                                            <button id="print-receipt" type="button">Print Receipt</button>
+                                            <button id="download-receipt" type="button">Download Receipt</button>
+                                        </div>
+                                </div>
+                                <div id="order-history-section" style="margin-top:24px;">
+                                    <h3>Order History (Session)</h3>
+                                    <ul id="order-history"></ul>
+                                </div>
+                                <button id="toggle-darkmode" type="button" style="margin-top:18px;">🌙 Toggle Dark Mode</button>
+                        </section>
+        </main>
+    </div>
+    <section id="contact" class="contact-section">
+        <div class="contact-card">
+            <h2>Contact Us</h2>
+            <p>Email: <a href="mailto:info@caffepro.com">info@caffepro.com</a></p>
+            <div class="social-links">
+                <a href="#" title="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+                <a href="#" title="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+                <a href="#" title="Twitter"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" /></a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© 2023 CaffePro. Made with <span class="coffee-icon">☕</span> by Taranjot Singh</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+           
